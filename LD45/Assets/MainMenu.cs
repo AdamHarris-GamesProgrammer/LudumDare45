@@ -12,15 +12,20 @@ public class MainMenu : MonoBehaviour
     public GameObject HelpMenu;
     public GameObject HelpMenuExitButton;
 
+    //represents the audio source for the UI buttons
+    public AudioSource UI_Button;
+
     //plays the game scene when the play button is pressed
     public void PlayButtonPressed()
     {
+        UI_Button.Play(0);
         SceneManager.LoadScene("MainLevel");
     }
 
     //quits the game when the quit button is pressed
     public void QuitButtonPressed()
     {
+        UI_Button.Play(0);
         Application.Quit();
     }
 
@@ -32,15 +37,15 @@ public class MainMenu : MonoBehaviour
     //displays the help menu when the help button is pressed
     public void HelpButtonPressed()
     {
+        UI_Button.Play(0);
         HelpMenu.SetActive(true);
-        HelpMenuExitButton.SetActive(true);
     }
 
     //exits the help menu when the exit help button is pressed
     public void HelpMenuExitPressed()
     {
+        UI_Button.Play(0);
         HelpMenu.SetActive(false);
-        HelpMenuExitButton.SetActive(false);
     }
 
 }
