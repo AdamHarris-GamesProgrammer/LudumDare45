@@ -8,12 +8,7 @@ public class LumbermillPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject lumbermillPrefab;
 
-    void Start()
-    {
-        Place();
-    }
-
-    void Place()
+    public void Place()
     {
         
         if(remainingTrees > 1 && !hasPlaced)
@@ -29,7 +24,6 @@ public class LumbermillPlacement : MonoBehaviour
                     lumbermillInstance.transform.rotation = tree.transform.rotation;
 
                     Destroy(tree.gameObject);
-                    Debug.Log("Destroyed:" + tree.name);
                     
                 }
 

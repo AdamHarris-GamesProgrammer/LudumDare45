@@ -8,12 +8,7 @@ public class FactoryPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject factoryPrefab;
 
-    void Start()
-    {
-        Place();
-    }
-
-    void Place()
+    public void Place()
     {
 
         if (remainingSpaces > 1 && !hasPlaced)

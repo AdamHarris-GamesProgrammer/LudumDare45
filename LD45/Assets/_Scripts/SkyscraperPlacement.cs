@@ -8,12 +8,8 @@ public class SkyscraperPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject skyscraperPrefab;
 
-    void Start()
-    {
-        Place();
-    }
 
-    void Place()
+    public void Place()
     {
 
         if (remainingSpaces > 1 && !hasPlaced)

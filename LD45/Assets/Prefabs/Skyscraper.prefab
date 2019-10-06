@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4748754762272943531}
   - component: {fileID: 3458869918378762707}
+  - component: {fileID: -6901880351643743642}
   m_Layer: 0
   m_Name: Skyscraper
   m_TagString: Untagged
@@ -80,3 +81,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6901880351643743642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892787057072671231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafe79972d1a23147b2ecec787ba9ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

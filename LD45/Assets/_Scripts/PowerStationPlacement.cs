@@ -8,12 +8,8 @@ public class PowerStationPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject powerStationPrefab;
 
-    void Start()
-    {
-        Place();
-    }
 
-    void Place()
+    public void Place()
     {
 
         if (remainingSpaces > 1 && !hasPlaced)
@@ -29,7 +25,7 @@ public class PowerStationPlacement : MonoBehaviour
                     powerStationInstance.transform.rotation = spaces.transform.rotation;
 
                     Destroy(spaces.gameObject);
-                    Debug.Log("Destroyed:" + spaces.name);
+
 
                 }
 

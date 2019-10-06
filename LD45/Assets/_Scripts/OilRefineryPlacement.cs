@@ -8,12 +8,8 @@ public class OilRefineryPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject refineryPrefab;
 
-    void Start()
-    {
-        Place();
-    }
 
-    void Place()
+    public void Place()
     {
 
         if (remainingOil > 1 && !hasPlaced)
@@ -29,7 +25,7 @@ public class OilRefineryPlacement : MonoBehaviour
                     refineryInstance.transform.rotation = oilDeposit.transform.rotation;
 
                     Destroy(oilDeposit.gameObject);
-                    Debug.Log("Destroyed:" + oilDeposit.name);
+
 
                 }
 

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
 
+
     void Awake()
     {
         if (instance == null)
@@ -24,17 +25,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float playerMoney = 5.0f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
 
 }

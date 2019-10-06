@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6841127003344172744}
   - component: {fileID: 1309747896290587514}
+  - component: {fileID: -7651295274373940485}
   m_Layer: 0
   m_Name: Lumbermill
   m_TagString: Untagged
@@ -80,3 +81,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7651295274373940485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186507703649683164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0106dce1e1d97904d9a0e179402a79ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

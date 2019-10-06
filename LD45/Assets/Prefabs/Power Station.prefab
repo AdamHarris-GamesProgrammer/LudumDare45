@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4935840327417673058}
   - component: {fileID: 1471474981776037222}
+  - component: {fileID: 2617760037829171299}
   m_Layer: 0
   m_Name: Power Station
   m_TagString: Untagged
@@ -80,3 +81,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2617760037829171299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3528698905145212952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1450f46a858202a44b3b42a44905bba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

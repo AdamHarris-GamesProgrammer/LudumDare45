@@ -8,12 +8,8 @@ public class MinePlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject minePrefab;
 
-    void Start()
-    {
-        Place();
-    }
 
-    void Place()
+    public void Place()
     {
 
         if (remainingOreDeposits > 1 && !hasPlaced)
@@ -29,7 +25,7 @@ public class MinePlacement : MonoBehaviour
                     mineInstance.transform.rotation = oreDeposit.transform.rotation;
 
                     Destroy(oreDeposit.gameObject);
-                    Debug.Log("Destroyed:" + oreDeposit.name);
+
 
                 }
 
