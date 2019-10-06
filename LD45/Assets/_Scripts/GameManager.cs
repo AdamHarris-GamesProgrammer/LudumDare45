@@ -6,10 +6,9 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    public UnityEvent test;
-    public GameManager instance;
+    
+    public static GameManager instance;
 
-    public GameObject testText;
     void Awake()
     {
         if (instance == null)
@@ -23,7 +22,6 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        test.AddListener(Test);
     }
 
     // Start is called before the first frame update
@@ -38,8 +36,5 @@ public class GameManager : MonoBehaviour
         
     }
     
-    void Test()
-    {
-        testText.SetActive(true);
-    }
+
 }
