@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     public void PlayButtonPressed()
     {
         UI_Button.Play(0);
-        SceneManager.LoadScene("MainLevel");
+        SceneManager.LoadScene("Game");
     }
 
     //quits the game when the quit button is pressed
