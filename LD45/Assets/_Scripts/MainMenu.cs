@@ -29,11 +29,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void ButtonHover()
-    {
-
-    }
-
     //displays the help menu when the help button is pressed
     public void HelpButtonPressed()
     {
