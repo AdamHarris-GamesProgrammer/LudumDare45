@@ -40,12 +40,12 @@ public class ResourceManager : MonoBehaviour
 
     private void Update()
     {
-        moneyText.text = "Money: $ " + playerMoney.ToString("F2");
-        woodText.text = "Wood: " + playerWood.ToString("F2");
-        coalText.text = "Coal: " + playerCoal.ToString("F2");
-        metalText.text = "Metal: " + playerMetal.ToString("F2");
-        powerText.text = "Power: " + playerPower.ToString("F2");
-        oilText.text = "Oil: " + playerOil.ToString("F2");
+        moneyText.text = playerMoney.ToString("F2");
+        woodText.text = playerWood.ToString("F2");
+        coalText.text = playerCoal.ToString("F2");
+        metalText.text = playerMetal.ToString("F2");
+        powerText.text = playerPower.ToString("F2");
+        oilText.text = playerOil.ToString("F2");
     }
 
 

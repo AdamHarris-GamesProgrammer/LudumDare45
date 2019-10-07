@@ -26,6 +26,8 @@ public class SkyscraperPlacement : MonoBehaviour
                     skyscraperInstance.transform.position = space.transform.position;
                     skyscraperInstance.transform.rotation = space.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     ResourceManager.instance.playerMoney -= moneyCost;
                     ResourceManager.instance.playerMetal -= metalCost;
 

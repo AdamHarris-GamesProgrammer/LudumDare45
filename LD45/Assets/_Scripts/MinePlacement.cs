@@ -26,6 +26,8 @@ public class MinePlacement : MonoBehaviour
                     mineInstance.transform.position = oreDeposit.transform.position;
                     mineInstance.transform.rotation = oreDeposit.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     ResourceManager.instance.playerMoney -= moneyCost;
                     ResourceManager.instance.playerWood -= woodCost;
 

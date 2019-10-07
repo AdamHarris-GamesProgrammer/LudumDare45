@@ -27,6 +27,8 @@ public class PowerStationPlacement : MonoBehaviour
                     powerStationInstance.transform.position = spaces.transform.position;
                     powerStationInstance.transform.rotation = spaces.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     ResourceManager.instance.playerMoney -= moneyCost;
                     ResourceManager.instance.playerMetal -= metalCost;
                     ResourceManager.instance.playerWood -= woodCost;

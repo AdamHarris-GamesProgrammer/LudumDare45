@@ -26,6 +26,8 @@ public class FactoryPlacement : MonoBehaviour
                     factoryInstance.transform.position = spaces.transform.position;
                     factoryInstance.transform.rotation = spaces.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     ResourceManager.instance.playerMoney -= moneyCost;
                     ResourceManager.instance.playerMetal -= metalCost;
 

@@ -26,6 +26,8 @@ public class OilRefineryPlacement : MonoBehaviour
                     refineryInstance.transform.position = oilDeposit.transform.position;
                     refineryInstance.transform.rotation = oilDeposit.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     ResourceManager.instance.playerMoney -= moneyCost;
                     ResourceManager.instance.playerMetal -= metalCost;
 

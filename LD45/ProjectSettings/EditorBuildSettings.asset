@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Credits.unity
     guid: 9a8e15ba58565da4d89345bf6524b4a0
-  - enabled: 1
-    path: Assets/_Scenes/Adam_TestLevel.unity
-    guid: 513745e2591ad2544bb54104a25e5ac8
   m_configObjects: {}

@@ -25,6 +25,8 @@ public class LumbermillPlacement : MonoBehaviour
                     lumbermillInstance.transform.position = tree.transform.position;
                     lumbermillInstance.transform.rotation = tree.transform.rotation;
 
+                    GameManager.instance.buildingCounter++;
+
                     Destroy(tree.gameObject);
                     
                 }
