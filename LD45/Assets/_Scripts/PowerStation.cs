@@ -9,8 +9,6 @@ public class PowerStation : MonoBehaviour
     public float coalCostSecond = 0.2f;
     public float oilCostSecond = 0.05f;
 
-    public float powerOutput = 2.0f;
-
     bool isOperational = false;
     bool useCoal = true;
     void Start()
@@ -41,7 +39,7 @@ public class PowerStation : MonoBehaviour
 
         if (isOperational)
         {
-            ResourceManager.instance.playerPower += powerOutput;
+            ResourceManager.instance.playerPower += UpgradeMenu.instance.powerStationPowerOutput;
             if (useCoal)
             {
                 ResourceManager.instance.playerCoal -= coalCostSecond;

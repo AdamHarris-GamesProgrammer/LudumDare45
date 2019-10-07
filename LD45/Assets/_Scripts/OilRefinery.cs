@@ -8,9 +8,6 @@ public class OilRefinery : MonoBehaviour
 
     public float powerRequirementSecond = 1.0f;
 
-    public float oilOutput = 0.8f;
-    public float moneyOutput = 3.40f;
-
 
     void Start()
     {
@@ -23,8 +20,8 @@ public class OilRefinery : MonoBehaviour
         if(ResourceManager.instance.playerPower >= powerRequirementSecond)
         {
             ResourceManager.instance.playerPower -= powerRequirementSecond;
-            ResourceManager.instance.playerMoney += moneyOutput;
-            ResourceManager.instance.playerOil += oilOutput;
+            ResourceManager.instance.playerMoney += UpgradeMenu.instance.oilRefineryMoneyOutput;
+            ResourceManager.instance.playerOil += UpgradeMenu.instance.oilRefineryOilOutput;
         }
 
     }
