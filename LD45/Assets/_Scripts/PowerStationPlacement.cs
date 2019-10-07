@@ -8,6 +8,9 @@ public class PowerStationPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject powerStationPrefab;
 
+    public float moneyCost = 1000f;
+    public float woodCost = 400f;
+    public float metalCost = 100f;
 
     public void Place()
     {
@@ -17,12 +20,16 @@ public class PowerStationPlacement : MonoBehaviour
             foreach (Transform spaces in transform)
             {
 
-                if (!hasPlaced)
+                if (!hasPlaced && ResourceManager.instance.playerMoney >= moneyCost && ResourceManager.instance.playerWood >= woodCost && ResourceManager.instance.playerMetal >= metalCost)
                 {
                     hasPlaced = true;
                     GameObject powerStationInstance = Instantiate(powerStationPrefab);
                     powerStationInstance.transform.position = spaces.transform.position;
                     powerStationInstance.transform.rotation = spaces.transform.rotation;
+
+                    ResourceManager.instance.playerMoney -= moneyCost;
+                    ResourceManager.instance.playerMetal -= metalCost;
+                    ResourceManager.instance.playerWood -= woodCost;
 
                     Destroy(spaces.gameObject);
 

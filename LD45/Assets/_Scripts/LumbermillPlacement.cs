@@ -8,6 +8,7 @@ public class LumbermillPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject lumbermillPrefab;
 
+    public float moneyCost = 5.0f;
     public void Place()
     {
         
@@ -16,9 +17,10 @@ public class LumbermillPlacement : MonoBehaviour
             foreach(Transform tree in transform)
             {
 
-                if (!hasPlaced)
+                if (!hasPlaced && ResourceManager.instance.playerMoney >= moneyCost)
                 {
                     hasPlaced = true;
+                    ResourceManager.instance.playerMoney -= moneyCost;
                     GameObject lumbermillInstance = Instantiate(lumbermillPrefab);
                     lumbermillInstance.transform.position = tree.transform.position;
                     lumbermillInstance.transform.rotation = tree.transform.rotation;

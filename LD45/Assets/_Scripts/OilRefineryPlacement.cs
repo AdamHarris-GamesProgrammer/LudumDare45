@@ -8,6 +8,8 @@ public class OilRefineryPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject refineryPrefab;
 
+    public float moneyCost = 2500f;
+    public float metalCost = 1000f;
 
     public void Place()
     {
@@ -17,12 +19,15 @@ public class OilRefineryPlacement : MonoBehaviour
             foreach (Transform oilDeposit in transform)
             {
 
-                if (!hasPlaced)
+                if (!hasPlaced && ResourceManager.instance.playerMetal >= moneyCost && ResourceManager.instance.playerMetal >= metalCost)
                 {
                     hasPlaced = true;
                     GameObject refineryInstance = Instantiate(refineryPrefab);
                     refineryInstance.transform.position = oilDeposit.transform.position;
                     refineryInstance.transform.rotation = oilDeposit.transform.rotation;
+
+                    ResourceManager.instance.playerMoney -= moneyCost;
+                    ResourceManager.instance.playerMetal -= metalCost;
 
                     Destroy(oilDeposit.gameObject);
 

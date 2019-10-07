@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7273576048434950774}
   - component: {fileID: 7273576048434950775}
+  - component: {fileID: 3566363760628586646}
+  - component: {fileID: 849938933}
+  - component: {fileID: 849938932}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -43,7 +46,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e888ba420f79c14287db5c29b8e4d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
+--- !u!114 &3566363760628586646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273576048434950772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c35cf5291254b4ca3cfde50c8ca184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMoney: 0
+  playerWood: 0
+  playerMetal: 0
+  playerCoal: 0
+  playerPower: 0
+  playerOil: 0
+  moneyText: {fileID: 0}
+  woodText: {fileID: 0}
+  coalText: {fileID: 0}
+  metalText: {fileID: 0}
+  powerText: {fileID: 0}
+  oilText: {fileID: 0}
+--- !u!58 &849938933
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273576048434950772}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5
+--- !u!114 &849938932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273576048434950772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b933a8a1b89bdb49bd8a79996080e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickAmount: 0.3

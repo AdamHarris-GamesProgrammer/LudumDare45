@@ -8,6 +8,8 @@ public class SkyscraperPlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject skyscraperPrefab;
 
+    public float moneyCost = 10000f;
+    public float metalCost = 3000f;
 
     public void Place()
     {
@@ -17,12 +19,15 @@ public class SkyscraperPlacement : MonoBehaviour
             foreach (Transform space in transform)
             {
 
-                if (!hasPlaced)
+                if (!hasPlaced && ResourceManager.instance.playerMoney >= moneyCost && ResourceManager.instance.playerMetal >= metalCost)
                 {
                     hasPlaced = true;
                     GameObject skyscraperInstance = Instantiate(skyscraperPrefab);
                     skyscraperInstance.transform.position = space.transform.position;
                     skyscraperInstance.transform.rotation = space.transform.rotation;
+
+                    ResourceManager.instance.playerMoney -= moneyCost;
+                    ResourceManager.instance.playerMetal -= metalCost;
 
                     Destroy(space.gameObject);
                     Debug.Log("Destroyed:" + space.name);

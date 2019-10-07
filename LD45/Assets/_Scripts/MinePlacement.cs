@@ -8,6 +8,8 @@ public class MinePlacement : MonoBehaviour
     bool hasPlaced = false;
     public GameObject minePrefab;
 
+    public float moneyCost = 100.0f;
+    public float woodCost = 20f;
 
     public void Place()
     {
@@ -17,12 +19,15 @@ public class MinePlacement : MonoBehaviour
             foreach (Transform oreDeposit in transform)
             {
 
-                if (!hasPlaced)
+                if (!hasPlaced && ResourceManager.instance.playerMoney >= moneyCost && ResourceManager.instance.playerWood >= woodCost)
                 {
                     hasPlaced = true;
                     GameObject mineInstance = Instantiate(minePrefab);
                     mineInstance.transform.position = oreDeposit.transform.position;
                     mineInstance.transform.rotation = oreDeposit.transform.rotation;
+
+                    ResourceManager.instance.playerMoney -= moneyCost;
+                    ResourceManager.instance.playerWood -= woodCost;
 
                     Destroy(oreDeposit.gameObject);
 

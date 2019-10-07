@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Lumbermill : MonoBehaviour
 {
-    public float moneyCost = 5.0f;
+
     public float moneyOutput = 0.30f;
     public float woodOutput = 0.20f;
 
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("Generation", 1f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void Generation()
     {
-        
+        ResourceManager.instance.playerMoney += moneyOutput;
+        ResourceManager.instance.playerWood += woodOutput;
     }
 }

@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public float playerMoney = 5.0f;
 
 
 }
