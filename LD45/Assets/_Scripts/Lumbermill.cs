@@ -5,9 +5,6 @@ using UnityEngine;
 public class Lumbermill : MonoBehaviour
 {
 
-    public float moneyOutput = 0.30f;
-    public float woodOutput = 0.20f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +14,7 @@ public class Lumbermill : MonoBehaviour
 
     void Generation()
     {
-        ResourceManager.instance.playerMoney += moneyOutput;
-        ResourceManager.instance.playerWood += woodOutput;
+        ResourceManager.instance.playerMoney += UpgradeMenu.instance.lumbermillMoneyOutput;
+        ResourceManager.instance.playerWood += UpgradeMenu.instance.lumbermillWoodOutput;
     }
 }

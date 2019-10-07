@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Factory : MonoBehaviour
 {
-
-
     public float powerRequirementSecond = 1.5f;
-
-    public float moneyOutput = 7.0f;
 
     void Start()
     {
@@ -21,7 +17,7 @@ public class Factory : MonoBehaviour
         if (ResourceManager.instance.playerPower >= powerRequirementSecond)
         {
             ResourceManager.instance.playerPower -= powerRequirementSecond;
-            ResourceManager.instance.playerMoney += moneyOutput;
+            ResourceManager.instance.playerMoney += UpgradeMenu.instance.factoryMoneyOutput;
             
         }
     }

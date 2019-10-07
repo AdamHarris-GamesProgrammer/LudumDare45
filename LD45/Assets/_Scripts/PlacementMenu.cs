@@ -54,4 +54,12 @@ public class PlacementMenu : MonoBehaviour
             sp.Place();
         }
     }
+
+    //update
+        //if lumbermill.isOn
+            //set requirments active
+
+        //else 
+            //set requirments off
+        
 }

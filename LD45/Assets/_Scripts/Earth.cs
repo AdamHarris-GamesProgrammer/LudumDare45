@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Earth : MonoBehaviour
 {
-    public float clickAmount = 0.3f;
 
     private void Update()
     {
@@ -15,7 +14,7 @@ public class Earth : MonoBehaviour
         Debug.Log("Mouse over");
         if (Input.GetMouseButtonDown(0))
         {
-            ResourceManager.instance.playerMoney += clickAmount;
+            ResourceManager.instance.playerMoney += UpgradeMenu.instance.clickMoneyOutput;
         }
     }
 
