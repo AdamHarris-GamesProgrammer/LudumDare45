@@ -18,30 +18,39 @@ public class PlacementMenu : MonoBehaviour
     public SkyscraperPlacement sp;
     public FactoryPlacement fp;
 
+    //represents the kaching audio for the UI when you buy something
+    public AudioSource BuySound;
+
     public void PlaceItem()
     {
         if (lumbermill.isOn)
         {
+            BuySound.Play();
             lp.Place();
         } 
         else if (mine.isOn)
         {
+            BuySound.Play();
             mp.Place();
         }
         else if (powerStation.isOn)
         {
+            BuySound.Play();
             psp.Place();
         }
         else if (oilRefinery.isOn)
         {
+            BuySound.Play();
             orp.Place();
         }
         else if (factory.isOn)
         {
+            BuySound.Play();
             fp.Place();
         }
         else if (skyscraper.isOn)
         {
+            BuySound.Play();
             sp.Place();
         }
     }
